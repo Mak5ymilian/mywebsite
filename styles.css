@@ -49,7 +49,13 @@ nav ul li a {
 
 .hero-content p {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content .quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-top: 1rem;
 }
 
 .hero-content .profile-pic {
@@ -57,14 +63,6 @@ nav ul li a {
     height: 150px;
     border-radius: 50%;
     margin-bottom: 1rem;
-}
-
-.btn {
-    background-color: #007bff;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
 }
 
 section {
@@ -79,6 +77,15 @@ h2 {
     color: #333;
 }
 
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    margin-bottom: 0.5rem;
+}
+
 footer {
     text-align: center;
     padding: 1rem 0;
@@ -86,4 +93,10 @@ footer {
     color: #fff;
     position: relative;
     width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+section {
+    margin-bottom: 100px;
 }
