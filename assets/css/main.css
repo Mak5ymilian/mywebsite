@@ -1,12 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,600,600italic,700");
 @import url("fontawesome-all.min.css");
 
-/*
-	Miniport by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -119,7 +113,35 @@ input, select, textarea {
 		}
 
 		a img {
+			max-width: 100%;
+			height: auto;
 			border: 0;
+		}
+
+		.image.fit img {
+			object-fit: cover; /* Ensures the image fills the container without distortion */
+			width: 100%; /* Ensures the image scales to the container width */
+			height: auto; /* Maintains aspect ratio */
+		}
+
+		.col-4 img, .col-6 img, .col-12 img {
+			max-width: 100%; /* Ensures images never exceed their container */
+			flex-wrap: wrap;
+		}
+
+		.col-4, .col-6, .col-12 {
+			flex: 0 0 50%; /* Set each column to take up 50% of the container width */
+			display: flex; /* Enable flex properties for column content */
+			flex-direction: column; /* Arrange column content vertically */
+		}
+
+		.col-4 > *, .col-6 > *, .col-12 > * {
+			flex: 1; /* Allow column content to expand to fill the available space */
+		}
+
+		img[src="images/pic03.png"] {
+			max-width: 100%;
+			height: auto;
 		}
 
 	b, strong {
@@ -351,10 +373,6 @@ input, select, textarea {
 			margin-left: 25%;
 		}
 
-		.row > .col-4 {
-			width: 33.33333%;
-		}
-
 		.row > .off-4 {
 			margin-left: 33.33333%;
 		}
@@ -365,10 +383,6 @@ input, select, textarea {
 
 		.row > .off-5 {
 			margin-left: 41.66667%;
-		}
-
-		.row > .col-6 {
-			width: 50%;
 		}
 
 		.row > .off-6 {
@@ -413,10 +427,6 @@ input, select, textarea {
 
 		.row > .off-11 {
 			margin-left: 91.66667%;
-		}
-
-		.row > .col-12 {
-			width: 100%;
 		}
 
 		.row > .off-12 {
@@ -594,10 +604,6 @@ input, select, textarea {
 					margin-left: 25%;
 				}
 
-				.row > .col-4-xlarge {
-					width: 33.33333%;
-				}
-
 				.row > .off-4-xlarge {
 					margin-left: 33.33333%;
 				}
@@ -608,10 +614,6 @@ input, select, textarea {
 
 				.row > .off-5-xlarge {
 					margin-left: 41.66667%;
-				}
-
-				.row > .col-6-xlarge {
-					width: 50%;
 				}
 
 				.row > .off-6-xlarge {
@@ -656,10 +658,6 @@ input, select, textarea {
 
 				.row > .off-11-xlarge {
 					margin-left: 91.66667%;
-				}
-
-				.row > .col-12-xlarge {
-					width: 100%;
 				}
 
 				.row > .off-12-xlarge {
@@ -839,10 +837,6 @@ input, select, textarea {
 					margin-left: 25%;
 				}
 
-				.row > .col-4-large {
-					width: 33.33333%;
-				}
-
 				.row > .off-4-large {
 					margin-left: 33.33333%;
 				}
@@ -853,10 +847,6 @@ input, select, textarea {
 
 				.row > .off-5-large {
 					margin-left: 41.66667%;
-				}
-
-				.row > .col-6-large {
-					width: 50%;
 				}
 
 				.row > .off-6-large {
@@ -902,11 +892,6 @@ input, select, textarea {
 				.row > .off-11-large {
 					margin-left: 91.66667%;
 				}
-
-				.row > .col-12-large {
-					width: 100%;
-				}
-
 				.row > .off-12-large {
 					margin-left: 100%;
 				}
@@ -1084,10 +1069,6 @@ input, select, textarea {
 					margin-left: 25%;
 				}
 
-				.row > .col-4-medium {
-					width: 33.33333%;
-				}
-
 				.row > .off-4-medium {
 					margin-left: 33.33333%;
 				}
@@ -1098,10 +1079,6 @@ input, select, textarea {
 
 				.row > .off-5-medium {
 					margin-left: 41.66667%;
-				}
-
-				.row > .col-6-medium {
-					width: 50%;
 				}
 
 				.row > .off-6-medium {
@@ -1146,10 +1123,6 @@ input, select, textarea {
 
 				.row > .off-11-medium {
 					margin-left: 91.66667%;
-				}
-
-				.row > .col-12-medium {
-					width: 100%;
 				}
 
 				.row > .off-12-medium {
@@ -1329,10 +1302,6 @@ input, select, textarea {
 					margin-left: 25%;
 				}
 
-				.row > .col-4-small {
-					width: 33.33333%;
-				}
-
 				.row > .off-4-small {
 					margin-left: 33.33333%;
 				}
@@ -1343,10 +1312,6 @@ input, select, textarea {
 
 				.row > .off-5-small {
 					margin-left: 41.66667%;
-				}
-
-				.row > .col-6-small {
-					width: 50%;
 				}
 
 				.row > .off-6-small {
@@ -1391,10 +1356,6 @@ input, select, textarea {
 
 				.row > .off-11-small {
 					margin-left: 91.66667%;
-				}
-
-				.row > .col-12-small {
-					width: 100%;
 				}
 
 				.row > .off-12-small {
