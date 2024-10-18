@@ -277,3 +277,62 @@
 .icon-link:hover {
   color: #0056b3; /* Change this to your desired hover color */
 }
+
+/* Reduce the space between the ul items */
+.mbr-section-subtitle ul {
+  margin-bottom: 5px; /* Adjust this to reduce the space between list items */
+  padding-left: 20px; /* Optional: Adjust to align list properly if needed */
+}
+
+/* Create a 2x2 grid layout for the ul elements */
+.mbr-section-subtitle .recommendation-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  grid-gap: 10px; /* Adjust the gap between the columns and rows */
+  margin-top: 15px; /* Space above the first ul */
+}
+
+/* Style for the individual ul items inside the grid */
+.mbr-section-subtitle .recommendation-list ul {
+  margin-bottom: 5px; /* Reduce space between items if needed */
+}
+
+/* Prevent the word 'Experience' from breaking into two lines */
+.mbr-section-title {
+  white-space: nowrap;
+}
+
+/* Center-align the Experience text across all screen sizes */
+.mbr-section-head {
+  text-align: center; /* Ensure the text is always centered */
+}
+
+
+/* Adjust the column width for smaller screens to ensure full-width alignment */
+@media (max-width: 768px) {
+  .content-head {
+      flex: 0 0 100%; /* Make the column take full width on small screens */
+      max-width: 100%;
+  }
+}
+/* Ensure 'University Experience' is centered and breaks 'Experience' into a new line on small screens */
+.mbr-section-title {
+  text-align: center; /* Center the text */
+  white-space: normal; /* Allow line break for smaller screens */
+}
+
+/* On small screens, move 'Experience' to a new line */
+@media (max-width: 768px) {
+  .mbr-section-title {
+      font-size: 1.8rem; /* Adjust size for smaller screens */
+  }
+
+  .mbr-section-title strong {
+      display: block; /* Make 'Experience' move to a new line */
+  }
+
+  .content-head {
+      flex: 0 0 100%; /* Ensure full width for the container on small screens */
+      max-width: 100%;
+  }
+}
